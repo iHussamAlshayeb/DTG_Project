@@ -22,12 +22,14 @@
     width: max-content;
     border: 1px solid black;
     height: 300px;
+    margin-right:110px;
  
 }
  
 td {
     text-align: center;
     border: 1px solid black;
+    width:155px;
 }
  
 #blank {
@@ -73,13 +75,13 @@ td {
 }
  
 #box1 {
-    color: cornflowerblue;
+    color: darkblue;
     font-family: 'Amiri', serif;
     font-weight: 800;
 }
  
 #box2 {
-    color: darkorange;
+    color: darkred;
     font-weight: 800;
     font-family: 'Amiri', serif;
 }
@@ -90,11 +92,6 @@ td {
     font-family: 'Amiri', serif;
 }
  
-#box4 {
-    color: green;
-    font-weight: 800;
-    font-family: 'Amiri', serif;
-}
 .button-75 {
   align-items: center;
   background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
@@ -121,7 +118,7 @@ td {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-right:290px;
+  margin-right:216px;
   margin-top:-30px;
 }
 
@@ -152,7 +149,9 @@ td {
     line-height: 50px;
   }
 }
- 
+select{
+  width:130px;
+}
 
       </style>
       <script>
@@ -162,8 +161,8 @@ document.getElementById('table').style.visibility = "hidden";
 function showTable(){
   var error = document.getElementById("error")
   var x= document.getElementById("input");
-   if(x.value == ""){
-    error.textContent = "الرجاء ادخال الرقم التدريبي"
+   if(x.value == "اختاري"){
+    error.textContent = "الرجاء اختيار الرقم التدريبي"
             error.style.color = "red"
             x.style.borderColor = "red"
     return false; 
@@ -183,12 +182,27 @@ function showTable(){
 <div class="separador"></div>
 <div class="contantTime">
 
-<label for"id" style="text-align:center;"> الرقم التدريبي:</lable>
-    <input placeholder  id="input" style="text-align:center; border: 2px solid black;width:25%;border-radius: 10px;" type="text" id="id" placeholder"الرقم التدريبي للمتدربة"/> 
+<label for="id" style="text-align:center;"> الرقم التدريبي:</lable>
+    <!-- <input placeholder  id="input" style="text-align:center; border: 2px solid black;width:25%;border-radius: 10px;" type="text" id="id" placeholder"الرقم التدريبي للمتدربة"/>  -->
+    <?php
+                                            include('../includes/dbh.inc.php');
+
+                                            $query = "SELECT * FROM students ORDER BY student_ID ASC LIMIT  0,6";
+                                            $result = mysqli_query($conn, $query);
+                                            ?>
+
+                                        <select id="input" name="students">
+                                          <option disabled selected>اختاري</option>
+                                            <?php
+                                                while ($row = mysqli_fetch_assoc($result)) {
+                                                    echo "<option value=".$row['student_ID'].">" . $row['student_ID'] . "</option>";
+                                                }
+                                                ?>
+                                        </select>
     <span style="margin-right:80px;" id="error"></span>
 
 <!-- HTML !-->
-<button class="button-75" role="button" onClick="javascript:showTable()"><span class="text">إرسال</span></button>
+<button class="button-75" role="button" onClick="javascript:showTable()"><span class="text">عرض</span></button>
 
     <br><br><br>
 
@@ -198,61 +212,92 @@ function showTable(){
          
     <table id='table' class="table table-compact w-full">
     <thead>
-            <tr>
-               <td id="sub1">         </td>
-               <td id="sub">9:00 - 10:15</td>
-               <td id="sub">10:30 - 11:45</td>
-               <td id="sub">11:30 - 12:30</td>
-               <td id="sub">12:30 - 2:00</td>
-               <td id="sub">2:00 - 3:00</td>
-               <td id="sub">3:00 - 4:00</td>
-              
-
-            </tr>
+          
          </thead>
          <tbody>
             <tr>
-               <td id="sub">الاحد</td>
-               <td id="blank">---</td>
-               <td id="box1">رياضيات</td>
-               <td id="box2">كيمياء</td>
-               <td id="box3">فيزياء</td>
-               <td rowspan="6">ب<br>ر<br>ي<br>ك
-               <td id="box4">احياء</td>
+               <td id="sub"><strong>الاحد</strong></td>
+               <!-- <td id="blank">---</td> -->
+               <td id="box1">مشروع
+                 <br>
+                 7:30 - 9:40
+               </td>
+               <td id="box2">تقنيات انترنت
+               <br>
+                 9:40 - 11:40
+               </td>
+               <td id="box3">برمجة أجهزة
+               <br>
+                 12:20 - 2:20
+               </td>
+              
               
             </tr>
             <tr>
-               <td id="sub">الاثنين</td>
-               <td id="box1">رياضيات</td>
-               <td id="box2">كيمياء</td>
-               <td id="box3">فيزياء</td>
-               <td id="blank">---</td>
-               <td id="box2">كيمياء</td>
+            <td id="sub"><strong>الاثنين</strong></td>
+               <td id="box1">سلوك وظيفي
+               <br>
+                 7:30 - 9:40
+               </td>
+               <td id="box2">برمجة أجهزة
+
+              <br>
+                 9:40 - 11:40
+               </td>
+               <td id="box3">تقنيات انترنت
+
+               <br>
+                 12:20 - 2:20
+               </td>
+          
           
             </tr>
             <tr>
-               <td id="sub">الثلاثاء</td>
-               <td id="box1">رياضيات</td>
-               <td id="box2">كيمياء</td>
+            <td id="sub"><strong>الثلاثاء</strong></td>
+               <td id="box1">لغة انجليزية
+
+               <br>
+                 7:30 - 9:40
+               </td>
+               <td id="box2">تأهيل لشهادات
+               <br>
+                 9:40 - 11:40 او 7:30 م
+               </td>
+               <td id="box3"> مشروع
+
+                     <br>
+                   12:20 - 2:20
+                    </td>
            
             </tr>
             <tr>
-               <td id="sub">الاربعاء</td>
-               <td id="box1">رياضيات</td>
-               <td id="box2">كيمياء</td>
-               <td id="box3">فيزياء</td>
+            <td id="sub"><strong>الاربعاء</strong></td>
+               <td id="box1">برمجة أجهزة
+               <br>
+                 7:30 - 9:40
+               </td>
+               <td id="box2" >تقنيات انترنت
+               <br>
+                 9:40 - 11:40
+               </td>
                <td id="blank">---</td>
-               <td id="box2">كيمياء</td>
+             
               
               
             </tr>
             <tr>
-               <td id="sub">الخميس</td>
-               <td id="box1">رياضيات</td>
-               <td id="box2">كيمياء</td>
-               <td id="box3">فيزياء</td>
+            <td id="sub"><strong>الخميس</strong></td>
+               <td id="box1">مشروع
+                 <br>
+                 7:30 - 9:40
+               </td>
+               <td id="box2">لغة انجليزية
+               <br>
+                 9:40 - 11:40
+               </td>
+            
                <td id="blank">---</td>
-               <td id="box4">احياء</td>
+              
               
             </tr>
          </tbody>
