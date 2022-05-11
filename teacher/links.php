@@ -10,11 +10,8 @@
 
     </head>
     <body>
-        <div class="header">
-            <a href="S_Service.php">
-                <img class="logo" src="../images/logo.svg" alt="" style="width:170px;margin-right: 5%;"/></a>   
-            <h3>الكلية التقنية الرقمية للبنات بالأحساء</h3>
-        </div>
+    <?php include('header.php')?>
+
         <div class="separador"></div>
         <div class="contant">
 

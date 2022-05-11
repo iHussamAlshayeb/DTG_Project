@@ -18,16 +18,13 @@
     <body>
         <script src="js/jquery-3.4.1.js"></script>
 
-        <div class="header">
-            <a href="T_Service.php">
-                <img class="logo" src="../images/logo.svg" alt="" style="width:170px;margin-right: 5%;"/></a>
-            <h3>الكلية التقنية الرقمية للبنات بالأحساء</h3>
-        </div>
+        <?php include('header.php')?>
+
         <div class="separador"></div>
 
         <div class="contant">
             <div class="container-fluid">
-                <section class="services">
+                <section class="tech_services">
 
 
                     <!--services-box-container------------------->

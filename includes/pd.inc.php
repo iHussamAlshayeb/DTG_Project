@@ -34,21 +34,18 @@ if (isset($_POST['std_info'])) {
 
             echo
 
-            '
-                
-<ul class="list-group list-group-flush">
-<li class="list-group-item">رقم المخالفة: ' . $violation_id . '</li>
-<li class="list-group-item">رقم المتدربة: ' . $student_id . '</li>
-
-  <li class="list-group-item">نوع المخالفة:' . $violation_name . '</li>
-  <li class="list-group-item">وصف المخالفة:' . $violation_description . '</li>
-  <li class="list-group-item">اسم المتدربة:' . $student_name . '</li>
-  <li class="list-group-item">الايميل:' . $student_email . '</li>
-
+            '     
+        
+<ul>
+<i class="fa fa-ban"></i>
+<li><strong>رقم المخالفة: </strong>' . $violation_id . '</li>
+<li><strong>رقم المتدربة: </strong>' . $student_id . '</li>
+  <li><strong>نوع المخالفة:</strong> ' . $violation_name . '</li>
+  <li><strong>وصف المخالفة: </strong>' . $violation_description . '</li>
+  <li><strong>اسم المتدربة: </strong>' . $student_name . '</li>
+  <li><strong>الايميل: </strong>' . $student_email . '</li>
 </ul>
-
-
-
+<br>
 ';
         }
     }
