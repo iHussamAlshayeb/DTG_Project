@@ -1041,3 +1041,12 @@ select {
         background-color: #3399ff;
     }
 }
+.contantTime{
+    width: 70%;
+    height: auto;
+    background-color: whitesmoke;
+    align-items: center;
+    margin-right:170px ;
+    border-radius: 6px;
+    padding: 2%;
+}
