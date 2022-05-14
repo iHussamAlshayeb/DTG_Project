@@ -54,7 +54,7 @@ include_once('includes/pd.inc.php');
                         <div class="flex items-baseline justify-between">
                             <button name="log_in"
                                 class="px-6 py-2 mt-4 text-white bg-blue-700 rounded-lg hover:bg-blue-900">الدخول</button>
-                            <a href="#" class="text-sm text-blue-600 hover:underline">نسيت كلمة المرور؟</a>
+                            <!-- <a href="#" class="text-sm text-blue-600 hover:underline">نسيت كلمة المرور؟</a> -->
                         </div>
                     </div>
 
