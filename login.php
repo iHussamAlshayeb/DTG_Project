@@ -19,12 +19,12 @@ include_once('includes/pd.inc.php');
 
 <body>
 
-<?php include('header.php');?>
+    <?php include('header.php');?>
     <div class="separador"></div>
     <div class="overlay">
 
 
-    <div class="flex items-center justify-center min-h-screen background-blend-mode: overlay">
+        <div class="flex items-center justify-center min-h-screen background-blend-mode: overlay">
             <div class="px-8 py-6 mt-4 text-right bg-white shadow-lg">
                 <div class="flex justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-green-700" fill="none"
@@ -49,7 +49,7 @@ include_once('includes/pd.inc.php');
                                     <input type="password" placeholder="كلمة المرور" name="password"
                                         class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                         </div>
-                    <span style="color:red;"><strong><?php include('error.php'); ?></strong></span>
+                        <span style="color:red;"><strong><?php include('error.php'); ?></strong></span>
 
                         <div class="flex items-baseline justify-between">
                             <button name="log_in"
@@ -67,7 +67,7 @@ include_once('includes/pd.inc.php');
     <script src="https://cdn.tailwindcss.com"></script>
 
 
-        <!-- <form name="myForm" method="post" action="login.php" class="login_form">
+    <!-- <form name="myForm" method="post" action="login.php" class="login_form">
 
             <div >
                 <h2>تسجيل الدخول</h2>

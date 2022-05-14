@@ -49,7 +49,7 @@ if (isset($_GET['logout'])) {
                                             <img alt="2"src="../images/tel.png" style="width:100% " />
                                             <h1>روابط التلقرام</h1>
                                             <p>تقدم هذه الخدمة روابط الشعب لتواصل مع المتدربات.</p>
-                                            <a class="s-btn" href="#">الانتقال الى هذه الخدمة</a>
+                                            <a class="s-btn" href="links.php">الانتقال الى هذه الخدمة</a>
                                         </div>
 </div>
                                    <div class="row">
@@ -58,7 +58,7 @@ if (isset($_GET['logout'])) {
                                             <img src="../images/gu.png" alt="1" style="width:100% " />
                                             <h1> الارشاد</h1>
                                             <p>تقدم هذه الخدمة التواصل مع الارشاد.</p>
-                                            <a class="s-btn" href="#">الانتقال الى هذه الخدمة</a>
+                                            <a class="s-btn" href="guidance.php">الانتقال الى هذه الخدمة</a>
                                         </div>
                                    
                                         <!-- <div class="column">
