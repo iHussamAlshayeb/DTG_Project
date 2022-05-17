@@ -44,7 +44,7 @@
                 <div class="conCalo">
                     <table>
 
-                        <tr>
+                        <!-- <tr>
 
                             <td>
                                 <label>اختر المقرر:</label>
@@ -82,7 +82,7 @@
                                     <option value="6" data-othervalue="19">مشروع</option>
                                 </select>
                             </td>
-                        </tr>
+                        </tr> -->
 
 
                         <tr>
@@ -93,13 +93,13 @@
                         <tr>
 
                             <td>
-                                <input readonly class="myinput" type="text" id="otherValue" name="otherValue">
+                                <input class="myinput" type="text" id="otherValue" name="otherValue">
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
 
-                                <label>عدد الساعات التدريبية</label>
+                                <label>عدد ساعات الغياب</label>
                             </td>
                         </tr>
                         <tr>
@@ -116,7 +116,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <input readonly class="myinput" type="text" name="calvalue" id="calvalue">
+                                <input  class="myinput" type="text" name="calvalue" id="calvalue">
                             </td>
                         </tr>
                         <tr>
@@ -139,17 +139,24 @@
 
 
     <script>
-    $('#select').change(function() {
-        var otherValue = $(this).find('option:selected').attr('value');
-        var someOtherValue = $(this).find('option:selected').attr('data-othervalue');
-        $('#otherValue').val(otherValue);
-        $('#someOtherValue').val(someOtherValue);
+    // $('#select').change(function() {
+    //     var otherValue = $(this).find('option:selected').attr('value');
+    //     var someOtherValue = $(this).find('option:selected').attr('data-othervalue');
+    //     $('#otherValue').val(otherValue);
+    //     $('#someOtherValue').val(someOtherValue);
 
+    //     var calcvalue = (otherValue * someOtherValue * 20) / 100;
+    //     $('#calvalue').val(calcvalue + "%");
+    // });
+
+    $('#someOtherValue').change(function() {
+        var otherValue = $("#otherValue").val();
+        var someOtherValue = $("#someOtherValue").val();
         var calcvalue = (otherValue * someOtherValue * 20) / 100;
         $('#calvalue').val(calcvalue + "%");
     });
 
-    $('#someOtherValue').change(function() {
+    $('#otherValue').change(function() {
         var otherValue = $("#otherValue").val();
         var someOtherValue = $("#someOtherValue").val();
         var calcvalue = (otherValue * someOtherValue * 20) / 100;

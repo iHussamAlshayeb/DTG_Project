@@ -72,8 +72,8 @@ if (isset($_GET['logout'])) {
                                         <div class="column">
                                             <div class="bar"></div>
                                             <img src="../images/sc.jpg" alt="1" style="width:100% " />
-                                            <h1> الجدول</h1>
-                                            <p> تقدم هذه الخدمة الأطلاع على جدول المواد والمحاضرات وارقام المعامل.</p>
+                                            <h1> التدريب التعاوني</h1>
+                                            <p>خدمة الاستعلام عن مواعيد التدريب التعاوني</p>
                                             <a class="s-btn" href="timetable.php">الانتقال الى هذه الخدمة</a>
                                         </div>
                                    
