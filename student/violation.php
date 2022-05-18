@@ -60,7 +60,7 @@
                                         <?php
                                             include('../includes/dbh.inc.php');
 
-                                            $query = "SELECT * FROM students ORDER BY student_ID ASC LIMIT  0,6";
+                                            $query = "SELECT * FROM students ORDER BY student_name ASC";
                                             $result = mysqli_query($conn, $query);
                                             ?>
 
