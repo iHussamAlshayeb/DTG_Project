@@ -30,7 +30,7 @@ if (isset($_POST['std_info'])) {
             $violation_name = $row['violation_name'];
             $violation_description = $row['violation_description'];
             $student_name = $row['student_name'];
-            $student_email = $row['student_email'];
+            $student_phone = $row['phone'];
 
             echo
 
@@ -43,7 +43,7 @@ if (isset($_POST['std_info'])) {
   <li><strong>نوع المخالفة:</strong> ' . $violation_name . '</li>
   <li><strong>وصف المخالفة: </strong>' . $violation_description . '</li>
   <li><strong>اسم المتدربة: </strong>' . $student_name . '</li>
-  <li><strong>الايميل: </strong>' . $student_email . '</li>
+  <li><strong>رقم الهاتف: </strong>' . $student_phone . '</li>
 </ul>
 <br>
 ';
