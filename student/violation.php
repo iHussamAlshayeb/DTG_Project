@@ -52,7 +52,7 @@
                             <form action="violation.php" method="POST">
                                 <tr>
                                     <td>
-                                        <label>الرقم التدريبي للمتدربة:</label>
+                                        <label>اسم المتدربة:</label>
                                     </td>
                                 </tr>
                                 <tr>
