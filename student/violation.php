@@ -67,7 +67,7 @@
                                         <select id="select_page" name="students">
                                             <?php
                                                 while ($row = mysqli_fetch_assoc($result)) {
-                                                    echo "<option value=".$row['student_ID'].">" . $row['student_ID'] . "</option>";
+                                                    echo "<option value=".$row['student_ID'].">" . $row["student_name"] . "</option>";
                                                 }
                                                 ?>
                                         </select>
