@@ -182,12 +182,12 @@ function showTable(){
 <div class="separador"></div>
 <div class="contantTime">
 
-<label for="id" style="text-align:center;"> الرقم التدريبي:</lable>
+<label for="id" style="text-align:center;">اسم المتدربة:</lable>
     <!-- <input placeholder  id="input" style="text-align:center; border: 2px solid black;width:25%;border-radius: 10px;" type="text" id="id" placeholder"الرقم التدريبي للمتدربة"/>  -->
     <?php
                                             include('../includes/dbh.inc.php');
 
-                                            $query = "SELECT * FROM students ORDER BY student_ID ASC LIMIT  0,6";
+                                            $query = "SELECT * FROM students ORDER BY student_name ASC";
                                             $result = mysqli_query($conn, $query);
                                             ?>
 
@@ -195,7 +195,7 @@ function showTable(){
                                           <option disabled selected>اختاري</option>
                                             <?php
                                                 while ($row = mysqli_fetch_assoc($result)) {
-                                                    echo "<option value=".$row['student_ID'].">" . $row['student_ID'] . "</option>";
+                                                    echo "<option value=".$row['student_ID'].">" . $row['student_name'] . "</option>";
                                                 }
                                                 ?>
                                         </select>
